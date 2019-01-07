@@ -5,26 +5,25 @@
     <meta charset="UTF-8">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="game-easy.js"></script> -->
+    <script type="text/javascript" src="server.js"></script>
+    <script type="text/javascript" src="eventListener.js"></script>
+    <script type="text/javascript" src="todo.js"></script>
+    <script type="text/javascript" src="storage.js"></script>
 </head>
 
-<body>
+<body onload="loadTodos()">
     <div id="input">
         <span id="caption">Todo List</span>
-        <input type="text" name="todo" placeholder="添加todo">
-        <button type="button">添加</button>
+        <input id="add" type="text" name="todo" placeholder="添加todo" onkeypress="enterAddTodo()" />
+        <button type="button" onclick="addTodo()">添加</button>
     </div>
-    <div id="list">
-        <ul>
-            <li>To do<button class="delete" type="button">×</button></li>
-        </ul>
-    </div>
+    <div id="list"></div>
     <div>
         <span id="items" class="bottom">left items:0</span>
-        <button id="all" class="bottom" type="button">ALL</button>
-        <button id="active" class="bottom" type="button">ACTIVE</button>
-        <button id="completed" class="bottom" type="button">COMPLETED</button>
-        <button id="clear" class="bottom" type="button">Clear Completed</button>
+        <button id="all" class="bottom" type="button" onclick="showAll(this)">ALL</button>
+        <button id="active" class="bottom" type="button" onclick="showActive(this)">ACTIVE</button>
+        <button id="completed" class="bottom" type="button" onclick="showCompleted(this)">COMPLETED</button>
+        <button id="clear" class="bottom" type="button" onclick="clearCompleted()">Clear Completed</button>
     </div>
 </body>
 

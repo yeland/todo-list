@@ -1,7 +1,6 @@
 * {
     margin: 0;
     font-family: sans-serif;
-    color: white;
 }
 body {
     padding: 0;
@@ -11,10 +10,10 @@ body {
     background: #85dfe9;
 }
 li {
-    list-style: none;
+    list-style: circle;
 }
 button { 
-    background: #af9243;
+    background: #e0bb53;
 }
 #input {
     padding: 50px 0;
@@ -27,15 +26,28 @@ button {
     margin: 0 80px 0 0;
     font-weight: bold;
 }
+#add {
+    color: black;
+}
 #list {
-    border: 1px solid black;
+    border-bottom: 1px solid gray; 
     margin: 10px 0;
+    padding: 10px 0;
     display: inline-block;
     width: 600px;
     text-align: left;
+    font-size: big;
+}
+.completed {
+    color: grey;
+    text-decoration: line-through;
+    list-style: unset;
 }
 .delete {
     margin: 0 10px;
+    float: right;
+    height: 20px;
+    visibility: hidden;
 }
 #clear {
     visibility: hidden;
@@ -47,4 +59,7 @@ button {
     background: palevioletred;
     padding: 2px;
     border: 1px solid white;
+}
+#all {
+    background: white;
 }
