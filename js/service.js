@@ -16,6 +16,7 @@ function checkEnterAddTodo() {
   const todo = getTodo(state);
   if (checkEnter()) {
     saveToStorage(todo);
+    addUpdateTodos();
   }
 }
 function checkEnter() {

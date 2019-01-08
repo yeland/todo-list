@@ -8,7 +8,6 @@ function buttonAddTodo() {
 
 function enterAddTodo() {
   checkEnterAddTodo();
-  addUpdateTodos();
 }
 function buttonShowAll(ele) {
   buttonInit();
