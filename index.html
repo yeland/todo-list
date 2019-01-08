@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="server.js"></script>
-    <script type="text/javascript" src="eventListener.js"></script>
-    <script type="text/javascript" src="todo.js"></script>
-    <script type="text/javascript" src="storage.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/service.js"></script>
+    <script type="text/javascript" src="./js/eventListener.js"></script>
+    <script type="text/javascript" src="./js/todo.js"></script>
+    <script type="text/javascript" src="./js/storage.js"></script>
 </head>
 
-<body onload="loadTodos()">
+<body onload="loadAll()">
     <div id="input">
         <span id="caption">Todo List</span>
         <input id="add" type="text" name="todo" placeholder="添加todo" onkeypress="enterAddTodo()" />
-        <button type="button" onclick="addTodo()">添加</button>
+        <button type="button" onclick="buttonAddTodo()">添加</button>
     </div>
     <div id="list"></div>
     <div>
         <span id="items" class="bottom">left items:0</span>
-        <button id="all" class="bottom" type="button" onclick="showAll(this)">ALL</button>
+        <button id="all" class="bottom" type="button" onclick="buttonShowAll(this)">ALL</button>
         <button id="active" class="bottom" type="button" onclick="showActive(this)">ACTIVE</button>
         <button id="completed" class="bottom" type="button" onclick="showCompleted(this)">COMPLETED</button>
         <button id="clear" class="bottom" type="button" onclick="clearCompleted()">Clear Completed</button>

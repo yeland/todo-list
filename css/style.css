@@ -4,8 +4,6 @@
 }
 body {
     padding: 0;
-    margin: 0;
-
     text-align: center;
     background: #85dfe9;
 }
@@ -37,6 +35,9 @@ button {
     width: 600px;
     text-align: left;
     font-size: big;
+}
+#list li:hover button {
+    visibility: visible;
 }
 .completed {
     color: grey;

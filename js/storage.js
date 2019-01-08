@@ -7,10 +7,10 @@ function getFromStorage() {
 }
 function saveToStorage(todo) {
   let todos = localStorage.getItem('todos');
-  todo.id = todos.length;
   if (todos === null) {
     todos = '[]';
   }
+  todo.id = todos.length;
   let todosCollection = JSON.parse(todos);
   todosCollection.push(todo);
   localStorage.setItem('todos', JSON.stringify(todosCollection));
