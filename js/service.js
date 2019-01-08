@@ -9,6 +9,7 @@ function addTodo() {
   const todo = getTodo(state);
   if (todo != -1) {
     saveToStorage(todo);
+    addUpdateTodos();
   }
 }
 function checkEnterAddTodo() {
