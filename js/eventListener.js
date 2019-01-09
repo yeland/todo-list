@@ -3,9 +3,8 @@ function loadAll() {
 }
 function buttonAddTodo() {
   addTodo();
-  addUpdateTodos();
+  updateTodosAfterAdd();
 }
-
 function enterAddTodo() {
   checkEnterAddTodo();
 }
