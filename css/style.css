@@ -47,7 +47,8 @@ button {
 .delete {
     margin: 0 10px;
     float: right;
-    height: 20px;
+    height: 21px;
+    line-height: 1px;
     visibility: hidden;
 }
 #clear {

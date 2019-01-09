@@ -4,39 +4,6 @@ function loadTodos() {
     showByState(todos, 'all');
   }
 }
-function addTodo() {
-  const state = getState();
-  const todo = getTodo(state);
-  if (todo != -1) {
-    saveToStorage(todo);
-  }
-}
-function checkEnterAddTodo() {
-  const state = getState();
-  const todo = getTodo(state);
-  if (checkEnter()) {
-    saveToStorage(todo);
-    addUpdateTodos();
-  }
-}
-function checkEnter() {
-  const todoString = document.getElementById('add').value;
-  return event.keyCode == 13 && todoString.length;
-}
-function addUpdateTodos() {
-  const state = getState();
-  const todos = getFromStorage();
-  if (state === 'completed') {
-    const completedTodos = todos.filter(todo => todo.state === 'completed');
-    updateInputAndItems(completedTodos);
-  } else {
-    showByState(state);
-  }
-}
-function updateTodos() {
-  const state = getState();
-  showByState(state);
-}
 function getState() {
   const activeColor = document.getElementById('active').style.background;
   const completedColor = document.getElementById('completed').style.background;
@@ -56,8 +23,40 @@ function getTodo(state) {
   if (state != 'completed') {
     state = 'active';
   }
-  const todo = new Todo(0, todoString, state);
-  return todo;
+  return new Todo(new Date().getMilliseconds(), todoString, state);  
+}
+function addTodo() {
+  const state = getState();
+  const todo = getTodo(state);
+  if (todo != -1) {
+    saveToStorage(todo);
+  }
+}
+function checkEnterAddTodo() {
+  const state = getState();
+  const todo = getTodo(state);
+  if (checkEnter()) {
+    saveToStorage(todo);
+    updateTodosAfterAdd();
+  }
+}
+function checkEnter() {
+  const todoString = document.getElementById('add').value;
+  return event.keyCode == 13 && todoString.length;
+}
+function updateTodosAfterAdd() {
+  const state = getState();
+  const todos = getFromStorage();
+  if (state === 'completed') {
+    const completedTodos = todos.filter(todo => todo.state === 'completed');
+    updateInputAndItems(completedTodos);
+  } else {
+    showByState(state);
+  }
+}
+function updateTodos() {
+  const state = getState();
+  showByState(state);
 }
 function showByState(state) {
   const todos = getFromStorage();
