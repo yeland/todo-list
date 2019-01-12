@@ -1,40 +1,48 @@
 * {
     margin: 0;
-    font-family: sans-serif;
+    font-family: sans-serif ;
 }
 body {
     padding: 0;
     text-align: center;
-    background: #85dfe9;
+    background: rgb(133, 223, 233);
 }
 li {
     list-style: circle;
-}
-button { 
-    background: #e0bb53;
+    border-bottom: 1px dotted black; 
+    margin: 5px 0;
 }
 #input {
-    padding: 50px 0;
+    padding: 20px 0;
     background: #474e4e;
 }
 #caption {
     font-size: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    word-spacing: 20px;
     color: white;
-    margin: 0 80px 0 0;
+    margin: 0 0 20px 0;
     font-weight: bold;
 }
 #add {
     color: black;
+    background: white;
+    outline: none;
+    border: 1px solid black;
+    height: 30px;
+    width: 35%;
+    border-radius: 20px;
+    padding-left: 20px;
 }
 #list {
     border-bottom: 1px solid gray; 
-    margin: 10px 0;
-    padding: 10px 0;
+    background: #c4f0f0 ;
+    margin-bottom: 20px;
+    padding-right: 20px;
     display: inline-block;
-    width: 600px;
+    width: 640px;
+    height: 450px;
     text-align: left;
-    font-size: big;
 }
 #list li:hover button {
     visibility: visible;
@@ -50,17 +58,26 @@ button {
     height: 21px;
     line-height: 1px;
     visibility: hidden;
+    border: none;
 }
-#clear {
+#bottom button {
+    background: #85dfe9;
+    text-decoration: none;
+    border: 1px solid white;
+    height: 30px;
+}
+#bottom #clear {
+    background: #c4f0f0;
     visibility: hidden;
-}
-.bottom {
-    margin: 0 10px;
+    color: purple;
+    margin-left: 30px;
+    border-radius: 25px;
 }
 #items {
-    background: palevioletred;
     padding: 2px;
-    border: 1px solid white;
+    margin-right: 30px;
+    color: red;
+    font-weight: bold;
 }
 #all {
     background: white;
