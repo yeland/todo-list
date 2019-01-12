@@ -13,17 +13,16 @@
 
 <body onload="loadAll()">
     <div id="input">
-        <span id="caption">Todo List</span>
+        <p id="caption">Todo List</p>
         <input id="add" type="text" name="todo" placeholder="添加todo" onkeypress="enterAddTodo()" />
-        <button type="button" onclick="buttonAddTodo()">添加</button>
     </div>
     <div id="list"></div>
-    <div>
-        <span id="items" class="bottom">left items:0</span>
-        <button id="all" class="bottom" type="button" onclick="buttonShowAll(this)">ALL</button>
-        <button id="active" class="bottom" type="button" onclick="showActive(this)">ACTIVE</button>
-        <button id="completed" class="bottom" type="button" onclick="showCompleted(this)">COMPLETED</button>
-        <button id="clear" class="bottom" type="button" onclick="clearCompleted()">Clear Completed</button>
+    <div id="bottom"> 
+        <span id="items">left items:0</span>
+        <button id="all" type="button" onclick="buttonShowAll(this)">ALL</button>
+        <button id="active" type="button" onclick="showActive(this)">ACTIVE</button>
+        <button id="completed" type="button" onclick="showCompleted(this)">COMPLETED</button>
+        <button id="clear" type="button" onclick="clearCompleted()">Clear Completed</button>
     </div>
 </body>
 

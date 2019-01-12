@@ -1,10 +1,6 @@
 function loadAll() {
   loadTodos();
 }
-function buttonAddTodo() {
-  addTodo();
-  updateTodosAfterAdd();
-}
 function enterAddTodo() {
   checkEnterAddTodo();
 }
