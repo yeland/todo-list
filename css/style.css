@@ -43,6 +43,7 @@ li {
     width: 640px;
     height: 450px;
     text-align: left;
+    overflow: auto;
 }
 #list li:hover button {
     visibility: visible;

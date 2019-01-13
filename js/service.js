@@ -13,8 +13,8 @@ function getTodo() {
   return new Todo(new Date().getMilliseconds(), todoString, 'active');  
 }
 function checkEnterAddTodo() {
-  const todo = getTodo();
   if (checkEnter()) {
+    const todo = getTodo();
     saveToStorage(todo);
     updateTodos();
   }
@@ -75,8 +75,7 @@ function showTodos(todos) {
 function generateList(todos) {
   return todos.map(todo =>
     `<li class=${todo.state} id=${todo.id} onclick="setCompleted(this)">
-      ${todo.content}
-      <button class="delete" type="button" onclick="deleteTodo(this)">×</button>
+      ${todo.content}<button class="delete" type="button" onclick="deleteTodo(this)">×</button>
     </li>`);
 }
 function updateInputAndItems(todos) {
